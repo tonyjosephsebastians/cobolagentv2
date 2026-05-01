@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cobol-agent"
+version = "0.1.0"
+description = "Python SDK and CLI for documenting, summarizing, and migrating COBOL repositories with agent workflows."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "COBOL Agent Contributors" }
+]
+keywords = ["cobol", "agent", "langchain", "migration", "documentation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "langchain>=1.0.0",
+  "langgraph>=1.0.0",
+  "pydantic>=2.7",
+  "rich>=13.7",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+openai = ["langchain-openai>=0.2.0"]
+dev = [
+  "pytest>=8.2",
+  "pytest-cov>=5.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+cobol-agent = "cobol_agent.cli:app"
+
+[project.urls]
+Homepage = "https://example.com/cobol-agent"
+Repository = "https://example.com/cobol-agent"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cobol_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
