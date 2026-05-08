@@ -5,7 +5,6 @@ scaffolding migrations for COBOL repositories. It is designed as an embeddable
 library first, so another Python application can import the SDK, pass provider
 credentials such as an OpenAI API key, and run modernization tasks directly.
 
-The CLI is a thin layer over the same SDK APIs.
 
 ## What It Does
 
