@@ -16,7 +16,7 @@ credentials such as an OpenAI API key, and run modernization tasks directly.
 - Generate conservative Python migration scaffolds.
 - Ask LLM-backed questions about a COBOL repository through a LangChain-compatible
   provider.
-- Run deterministic local workflows without an API key for indexing, docs, and
+- Run deterministic local workflows  API key for indexing, docs, and
   migration scaffolding.
 
 ## Project Status
