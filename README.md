@@ -27,7 +27,7 @@ planning. It is not a full COBOL compiler or dialect-complete parser.
 
 The parser, provider, and workflow layers are pluggable so stronger parsers,
 additional LLM providers, and additional migration targets can be added without
-breaking the public SDK surface.
+breaking the  SDK surface.
 
 ## Requirements
 
