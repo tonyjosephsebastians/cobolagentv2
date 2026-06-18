@@ -17,7 +17,7 @@ credentials such as an OpenAI API key, and run modernization tasks directly.
 - Ask LLM-backed questions about a COBOL repository through a LangChain-compatible
   provider.
 - Run deterministic local workflows  API key for indexing, docs, and
-  migration scaffolding.
+  migration.
 
 ## Project Status
 
